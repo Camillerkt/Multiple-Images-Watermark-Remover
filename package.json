@@ -1,0 +1,20 @@
+{
+  "name": "photorunningwatermarkremover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "image-downloader": "^4.3.0",
+    "nodemon": "^2.0.16",
+    "puppeteer": "^14.4.1",
+    "puppeteer-extra": "^3.3.0",
+    "puppeteer-extra-plugin-recaptcha": "^3.6.0"
+  }
+}
