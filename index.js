@@ -3,6 +3,9 @@ const puppeteer = require("puppeteer-extra");
 const RecaptchaPlugin = require("puppeteer-extra-plugin-recaptcha");
 const download = require("image-downloader");
 
+// Change here whenever the selector changes
+const DEFAULT_DOWNLOAD_QUERY_SELECTOR = ".dpLYmT";
+
 puppeteer.use(
   RecaptchaPlugin({
     provider: { id: "2captcha", token: "XXXX" },
@@ -40,8 +43,8 @@ puppeteer.use(
     await page.solveRecaptchas();
     /* end resolve captcha */
 
-    await page.waitForSelector(".hyUBYz");
-    await page.click(".hyUBYz");
+    await page.waitForSelector(DEFAULT_DOWNLOAD_QUERY_SELECTOR);
+    await page.click(DEFAULT_DOWNLOAD_QUERY_SELECTOR);
 
     await sleep(500);
 
